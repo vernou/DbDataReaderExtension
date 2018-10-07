@@ -17,5 +17,5 @@ build_script:
 test_script:
   - cmd: dotnet test .\src\DbDataReaderExtension.Test\
   - cmd: OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test ./src/DbDataReaderExtension.Test" -output:".\DbDataReaderExtension_coverage.xml" -oldstyle
-  - cmd: codecov -f "DbDataReaderExtension_coverage.xml" -t e3eea377-ce95-4f9f-9baa-387d22422c37
+  - cmd: codecov -f "DbDataReaderExtension_coverage.xml" -t f108f5e9-c096-4285-ad50-395a66aac1ae
 deploy: off
