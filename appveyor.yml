@@ -3,15 +3,19 @@ image: Visual Studio 2017
 branches:
   only:
   - master
-  - i3
+  - i5
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
 clone_depth: 1
 before_build:
   - cmd: dotnet --version
+  - cmd: choco install opencover.portable
+  - cmd: choco install codecov
 build_script:
   - cmd: dotnet build ./src
 test_script:
   - cmd: dotnet test .\src\DbDataReaderExtension.Test\
+  - cmd: OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test ./src/DbDataReaderExtension.Test" -output:".\DbDataReaderExtension_coverage.xml" -oldstyle
+  - cmd: codecov -f "DbDataReaderExtension_coverage.xml" -t e3eea377-ce95-4f9f-9baa-387d22422c37
 deploy: off
