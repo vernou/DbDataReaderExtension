@@ -14,7 +14,7 @@ namespace DbDataReaderExtension
         /// <param name="reader">The DbDataReader</param>
         /// <param name="name">The column name</param>
         /// <returns>true if the specified column is equivalent to DBNull; otherwise false.</returns>
-        /// <exception cref="System.InvalidOperationException">The column name is not valid.</param>
+        /// <exception cref="System.InvalidOperationException">The column name is not valid.</exception>
         public static bool IsDBNull(this DbDataReader reader, string name)
         {
             return reader.IsDBNull(reader.Ordinal(name));
@@ -27,7 +27,7 @@ namespace DbDataReaderExtension
         /// <param name="name">The column name</param>
         /// <typeparam name="T">The column type</typeparam>
         /// <returns>The value of the specified column as a type.</returns>
-        /// <exception cref="System.InvalidOperationException">The column name is not valid.</param>
+        /// <exception cref="System.InvalidOperationException">The column name is not valid.</exception>
         public static T GetFieldValue<T>(this DbDataReader reader, string name)
         {
             return reader.GetFieldValue<T>(reader.Ordinal(name));

@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>full</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>DbDataReaderExtension</PackageId>
+    <Version>0.0.3</Version>
+    <Authors>Cédric VERNOU</Authors>
+    <Description>.NET Standard library : Extension methods to System.Data.Common.DbDataReader</Description>
+    <RepositoryUrl>https://github.com/Orwel/DbDataReaderExtension</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Orwel/DbDataReaderExtension</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Orwel/DbDataReaderExtension/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
